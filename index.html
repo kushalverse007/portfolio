@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kushal Poudel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">KP<span>.</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#playground">Playground</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-hire" onclick="launchConfetti()">Hire Me! 🎉</button>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#playground" onclick="closeMenu()">Playground</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-shape hbs1"></div>
+  <div class="hero-bg-shape hbs2"></div>
+  <div class="hero-bg-shape hbs3"></div>
+  <div class="hero-left">
+    <div class="hero-status"><span class="dot-green"></span> Open to work &amp; collaborations</div>
+    <h1>Hi, I'm<br><span class="accent">Kushal Poudel</span></h1>
+    <div class="hero-role">A passionate <span class="cycling-word" id="roleCycle">Developer</span></div>
+    <p class="hero-desc">
+      18-year-old from Pokhara, Nepal just finished Class 12 and aspiring to become an AI Specialist. I build creative, fast, and meaningful things for the web, apps, and beyond.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#projects">View Projects →</a>
+      <a class="btn-secondary" href="#contact">Contact Me</a>
+    </div>
+    <div class="hero-tags">
+      <span class="htag ht-orange">Web Dev</span>
+      <span class="htag ht-blue">App Dev</span>
+      <span class="htag ht-violet">AI Enthusiast</span>
+      <span class="htag ht-green">BSc CSIT</span>
+      <span class="htag ht-amber">Pokhara 🇳🇵</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="photo-frame">
+      <div class="photo-badge">📸</div>
+        <img src="kushal.jpeg" alt="Kushal Poudel" width="350" height="400" class="hero-photo">
+      </div>
+    <div class="quick-info">
+      <div class="qi-row">
+        <div class="qi-icon" style="background:#FFF3E0;">📍</div>
+        <span class="qi-label">Location</span>
+        <span class="qi-val">Pokhara, Nepal</span>
+      </div>
+      <div class="qi-row">
+        <div class="qi-icon" style="background:#FFFBEB;">🎂</div>
+        <span class="qi-label">Age</span>
+        <span class="qi-val">18 years</span>
+      </div>
+      <div class="qi-row">
+        <div class="qi-icon" style="background:#EFF6FF;">🎓</div>
+        <span class="qi-label">Education</span>
+        <span class="qi-val">Class 12 Passed</span>
+      </div>
+      <div class="qi-row">
+        <div class="qi-icon" style="background:#F5F3FF;">🚀</div>
+        <span class="qi-label">Goal</span>
+        <span class="qi-val">AI Specialist</span>
+      </div>
+      <div class="qi-row">
+        <div class="qi-icon" style="background:#ECFDF5;">💼</div>
+        <span class="qi-label">Status</span>
+        <span class="qi-val" style="color:var(--c5);font-weight:800;">Available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num counter" data-target="18" style="color:var(--c2);">0</span>
+    <span class="stat-label">Years Old</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num counter" data-target="6" style="color:var(--c1);">0</span>
+    <span class="stat-label">Projects Built</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num counter" data-target="8" style="color:var(--c3);">0</span>
+    <span class="stat-label">Technologies</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num" style="color:var(--c5);">∞</span>
+    <span class="stat-label">Creativity</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about-bg" id="about">
+  <div class="fade-in">
+    <div class="sec-label sl-orange">Who am I</div>
+    <h2 class="sec-title">About Me</h2>
+    <p class="sec-sub">A curious, energetic student from the mountains of Nepal.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-story fade-in">
+      <h3>Hey there! I'm Kushal 👋</h3>
+      <p>I'm an 18-year-old from Pokhara, Nepal. I just finished Class 12 and aspiring to become an AI Specialist. I build creative, fast, and meaningful things for the web, apps, and beyond.</p>
+      <p>I'm deeply passionate about technology. Web Development, App Development, and Artificial Intelligence aren't just subjects to me, they're things I genuinely love exploring and building with.</p>
+      <p>I bring energy, enthusiasm, and a creative mindset to everything I do. I believe great things happen when curiosity meets hard work.</p>
+      <div class="about-highlights">
+        <div class="ah ah1">⚡ Energetic &amp; driven</div>
+        <div class="ah ah2">🏔️ From Pokhara, NP</div>
+        <div class="ah ah3">🌐 Web enthusiast</div>
+        <div class="ah ah4">🤖 AI curious</div>
+        <div class="ah ah5">📱 App developer</div>
+        <div class="ah ah6">🎓 IT aspirant</div>
+      </div>
+    </div>
+    <div class="about-card-side fade-in">
+      <h4>Interests &amp; Passions</h4>
+      <div>
+        <span class="interest-tag it1">🌐 Web Development</span>
+        <span class="interest-tag it2">📱 App Development</span>
+        <span class="interest-tag it3">🤖 Artificial Intelligence</span>
+        <span class="interest-tag it4">🔒 Cybersecurity</span>
+        <span class="interest-tag it5">☁️ Cloud Computing</span>
+        <span class="interest-tag it1">🎨 UI/UX Design</span>
+        <span class="interest-tag it2">📊 Data Science</span>
+        <span class="interest-tag it3">🧠 Machine Learning</span>
+        <span class="interest-tag it4">🏔️ Hiking</span>
+        <span class="interest-tag it5">🎮 Gaming</span>
+      </div>
+      <div class="currently-box">
+        <h5>Currently</h5>
+        <p>
+          📚 Preparing for IT course<br>
+          💻 Building personal projects<br>
+          🌱 Learning React &amp; Python daily<br>
+          🔍 Exploring AI tools &amp; frameworks
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section skills-bg" id="skills">
+  <div class="fade-in">
+    <div class="sec-label sl-blue">What I know</div>
+    <h2 class="sec-title">My Skills</h2>
+    <p class="sec-sub">Technologies and tools I work with regularly.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-col fade-in">
+      <div class="skill-col-header">
+        <div class="skill-col-dot" style="background:var(--c1)"></div>
+        <div class="skill-col-title">Frontend</div>
+      </div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">HTML5 &amp; CSS3</span><span class="sbar-pct" style="color:var(--c1)">90%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="90" style="background:var(--c1)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">JavaScript</span><span class="sbar-pct" style="color:var(--c2)">80%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="80" style="background:var(--c2)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">React.js</span><span class="sbar-pct" style="color:var(--c3)">70%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="70" style="background:var(--c3)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Tailwind CSS</span><span class="sbar-pct" style="color:var(--c4)">75%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="75" style="background:var(--c4)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">TypeScript</span><span class="sbar-pct" style="color:var(--c1)">55%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="55" style="background:var(--c1)"></div></div></div>
+    </div>
+    <div class="skill-col fade-in">
+      <div class="skill-col-header">
+        <div class="skill-col-dot" style="background:var(--c4)"></div>
+        <div class="skill-col-title">Backend</div>
+      </div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Python</span><span class="sbar-pct" style="color:var(--c4)">78%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="78" style="background:var(--c4)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Node.js</span><span class="sbar-pct" style="color:var(--c5)">65%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="65" style="background:var(--c5)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Express.js</span><span class="sbar-pct" style="color:var(--c3)">60%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="60" style="background:var(--c3)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">MongoDB</span><span class="sbar-pct" style="color:var(--c5)">62%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="62" style="background:var(--c5)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">REST APIs</span><span class="sbar-pct" style="color:var(--c4)">72%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="72" style="background:var(--c4)"></div></div></div>
+    </div>
+    <div class="skill-col fade-in">
+      <div class="skill-col-header">
+        <div class="skill-col-dot" style="background:var(--c5)"></div>
+        <div class="skill-col-title">Tools &amp; Others</div>
+      </div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Git &amp; GitHub</span><span class="sbar-pct" style="color:var(--c1)">85%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="85" style="background:var(--c1)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Figma</span><span class="sbar-pct" style="color:var(--c3)">70%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="70" style="background:var(--c3)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Firebase</span><span class="sbar-pct" style="color:var(--c2)">65%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="65" style="background:var(--c2)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">Linux / CLI</span><span class="sbar-pct" style="color:var(--c5)">68%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="68" style="background:var(--c5)"></div></div></div>
+      <div class="sbar"><div class="sbar-top"><span class="sbar-name">VS Code</span><span class="sbar-pct" style="color:var(--c4)">92%</span></div><div class="sbar-track"><div class="sbar-fill" data-pct="92" style="background:var(--c4)"></div></div></div>
+    </div>
+  </div>
+  <div class="tools-section fade-in">
+    <h3>Other tools I use</h3>
+    <div class="tools-wrap">
+      <div class="tool" style="background:#FFF3E0;color:#B45309;border-color:#F97316;">Postman</div>
+      <div class="tool" style="background:#EFF6FF;color:#1D4ED8;border-color:var(--c3);">Docker</div>
+      <div class="tool" style="background:#F5F3FF;color:#5B21B6;border-color:var(--c4);">Vercel</div>
+      <div class="tool" style="background:#ECFDF5;color:#065F46;border-color:var(--c5);">Netlify</div>
+      <div class="tool" style="background:#FFFBEB;color:#92400E;border-color:var(--c2);">Canva</div>
+      <div class="tool" style="background:#FFF3E0;color:#B45309;border-color:#F97316;">ChatGPT API</div>
+      <div class="tool" style="background:#EFF6FF;color:#1D4ED8;border-color:var(--c3);">Notion</div>
+      <div class="tool" style="background:#F5F3FF;color:#5B21B6;border-color:var(--c4);">MySQL</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section projects-bg" id="projects">
+  <div class="fade-in">
+    <div class="sec-label sl-violet">What I built</div>
+    <h2 class="sec-title">My Projects</h2>
+    <p class="sec-sub">Real projects I've built while learning and growing.</p>
+  </div>
+  <div class="projects-grid">
+    <div class="proj-card pc-orange fade-in">
+      <div class="proj-icon" style="background:#FFF3E0;">🌦️</div>
+      <h3>Nepal Weather App</h3>
+      <p>A real-time weather app for Nepal's cities. Fetches live weather data from OpenWeather API with a clean, responsive UI showing temperature, humidity, and forecasts.</p>
+      <div class="proj-tags">
+        <span class="ptag" style="background:#FFF3E0;color:#B45309;">JavaScript</span>
+        <span class="ptag" style="background:#EFF6FF;color:#1D4ED8;">OpenWeather API</span>
+        <span class="ptag" style="background:#FFFBEB;color:#92400E;">CSS3</span>
+      </div>
+      <div class="proj-links">
+        <a class="plink plink-dark" href="#">Under construction</a>
+        <a class="plink plink-out" href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="proj-card pc-blue fade-in">
+      <div class="proj-icon" style="background:#EFF6FF;">📝</div>
+      <h3>Task Manager App</h3>
+      <p>A full-stack to-do and task management app with user authentication, task categories, deadlines, and a beautiful dashboard. Built with React and Node.js.</p>
+      <div class="proj-tags">
+        <span class="ptag" style="background:#EFF6FF;color:#1D4ED8;">React</span>
+        <span class="ptag" style="background:#F5F3FF;color:#5B21B6;">Node.js</span>
+        <span class="ptag" style="background:#ECFDF5;color:#065F46;">MongoDB</span>
+      </div>
+      <div class="proj-links">
+        <a class="plink plink-dark" href="#">Under construction</a>
+        <a class="plink plink-out" href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="proj-card pc-violet fade-in">
+      <div class="proj-icon" style="background:#F5F3FF;">🤖</div>
+      <h3>AI Chat Assistant</h3>
+      <p>A chatbot web app powered by OpenAI API. Supports conversation history, custom prompts, and a sleek chat UI. Users can ask anything and get intelligent answers.</p>
+      <div class="proj-tags">
+        <span class="ptag" style="background:#F5F3FF;color:#5B21B6;">Python</span>
+        <span class="ptag" style="background:#FFF3E0;color:#B45309;">OpenAI API</span>
+        <span class="ptag" style="background:#EFF6FF;color:#1D4ED8;">Flask</span>
+      </div>
+      <div class="proj-links">
+        <a class="plink plink-dark" href="#">Under construction</a>
+        <a class="plink plink-out" href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="proj-card pc-green fade-in">
+      <div class="proj-icon" style="background:#ECFDF5;">🛒</div>
+      <h3>E-Commerce UI</h3>
+      <p>A fully responsive e-commerce front end with product listings, cart, search, and filters. Designed with a mobile-first approach and smooth animations.</p>
+      <div class="proj-tags">
+        <span class="ptag" style="background:#ECFDF5;color:#065F46;">React</span>
+        <span class="ptag" style="background:#FFFBEB;color:#92400E;">Tailwind CSS</span>
+        <span class="ptag" style="background:#F5F3FF;color:#5B21B6;">Firebase</span>
+      </div>
+      <div class="proj-links">
+        <a class="plink plink-dark" href="#">Under construction</a>
+        <a class="plink plink-out" href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYGROUND -->
+<section class="section play-bg" id="playground">
+  <div class="fade-in">
+    <div class="sec-label sl-amber">Interactive</div>
+    <h2 class="sec-title">Mini Playground</h2>
+    <p class="sec-sub">Fun little tools — built with vanilla JavaScript.</p>
+  </div>
+  <div class="play-grid">
+    <!-- Colour Switcher -->
+    <div class="p-card fade-in">
+      <div class="p-card-icon" style="background:#FFF3E0;">🎨</div>
+      <h3>Colour Theme Switcher</h3>
+      <p>Click a colour to switch the accent live. CSS variables in action!</p>
+      <div class="theme-swatches">
+        <div class="swatch active" style="background:var(--c1)" onclick="switchTheme(this,'#FF6B00','#FFF3E0','#B45309')"></div>
+        <div class="swatch" style="background:var(--c2)" onclick="switchTheme(this,'#FFB800','#FFFBEB','#92400E')"></div>
+        <div class="swatch" style="background:var(--c3)" onclick="switchTheme(this,'#00C2FF','#EFF6FF','#1D4ED8')"></div>
+        <div class="swatch" style="background:var(--c4)" onclick="switchTheme(this,'#7C3AED','#F5F3FF','#5B21B6')"></div>
+        <div class="swatch" style="background:var(--c5)" onclick="switchTheme(this,'#10B981','#ECFDF5','#065F46')"></div>
+        <div class="swatch" style="background:#EF4444" onclick="switchTheme(this,'#EF4444','#FEF2F2','#991B1B')"></div>
+      </div>
+      <div class="theme-preview-box" id="themePreview" style="background:#FFF3E0;color:#B45309;">Accent: #FF6B00</div>
+    </div>
+    <!-- Typing Speed -->
+    <div class="p-card fade-in">
+      <div class="p-card-icon" style="background:#EFF6FF;">⌨️</div>
+      <h3>Typing Speed Test</h3>
+      <p>Type anything and see your live WPM, character and word count!</p>
+      <input class="type-input" id="typeInput" placeholder="Start typing here..." oninput="calcTyping()">
+      <div class="type-stats-row">
+        <div class="tstat" style="background:#FFF3E0;color:#B45309;" id="wpmStat">0 WPM</div>
+        <div class="tstat" style="background:#EFF6FF;color:#1D4ED8;" id="charStat">0 chars</div>
+        <div class="tstat" style="background:#ECFDF5;color:#065F46;" id="wordStat">0 words</div>
+      </div>
+    </div>
+    <!-- Mood Picker -->
+    <div class="p-card fade-in">
+      <div class="p-card-icon" style="background:#F5F3FF;">😊</div>
+      <h3>How are you feeling?</h3>
+      <p>Pick your current mood and I'll send you a vibe!</p>
+      <div class="mood-btns">
+        <button class="mood-btn" style="border-color:var(--c2);color:#92400E" onclick="setMood(this,'#FFFBEB','#92400E','Keep smiling — you are unstoppable! 🌟')">Happy</button>
+        <button class="mood-btn" style="border-color:var(--c3);color:#1D4ED8" onclick="setMood(this,'#EFF6FF','#1D4ED8','Curiosity is a superpower. Keep exploring! 🚀')">Curious</button>
+        <button class="mood-btn" style="border-color:var(--c1);color:#B45309" onclick="setMood(this,'#FFF3E0','#B45309','Let that fire burn — go build something! 🔥')">Inspired</button>
+        <button class="mood-btn" style="border-color:var(--c4);color:#5B21B6" onclick="setMood(this,'#F5F3FF','#5B21B6','Rest is part of the journey. Come back stronger! 💜')">Tired</button>
+        <button class="mood-btn" style="border-color:var(--c5);color:#065F46" onclick="setMood(this,'#ECFDF5','#065F46','Perfect time to learn something new! 🌱')">Bored</button>
+      </div>
+      <div class="mood-result" id="moodResult"></div>
+    </div>
+    <!-- Calculator -->
+    <div class="p-card fade-in">
+      <div class="p-card-icon" style="background:#FFFBEB;">🧮</div>
+      <h3>Mini Calculator</h3>
+      <p>A cute working calculator — built with pure JavaScript!</p>
+      <div class="calc-display" id="calcDisplay">0</div>
+      <div class="calc-grid">
+        <button class="calc-btn cb-cl" onclick="calcInput('C')">C</button>
+        <button class="calc-btn cb-op" onclick="calcInput('%')">%</button>
+        <button class="calc-btn cb-op" onclick="calcInput('⌫')">⌫</button>
+        <button class="calc-btn cb-op" onclick="calcInput('/')">÷</button>
+        <button class="calc-btn cb-num" onclick="calcInput('7')">7</button>
+        <button class="calc-btn cb-num" onclick="calcInput('8')">8</button>
+        <button class="calc-btn cb-num" onclick="calcInput('9')">9</button>
+        <button class="calc-btn cb-op" onclick="calcInput('*')">×</button>
+        <button class="calc-btn cb-num" onclick="calcInput('4')">4</button>
+        <button class="calc-btn cb-num" onclick="calcInput('5')">5</button>
+        <button class="calc-btn cb-num" onclick="calcInput('6')">6</button>
+        <button class="calc-btn cb-op" onclick="calcInput('-')">−</button>
+        <button class="calc-btn cb-num" onclick="calcInput('1')">1</button>
+        <button class="calc-btn cb-num" onclick="calcInput('2')">2</button>
+        <button class="calc-btn cb-num" onclick="calcInput('3')">3</button>
+        <button class="calc-btn cb-op" onclick="calcInput('+')">+</button>
+        <button class="calc-btn cb-num" onclick="calcInput('0')" style="grid-column:span 2">0</button>
+        <button class="calc-btn cb-num" onclick="calcInput('.')">.</button>
+        <button class="calc-btn cb-eq" onclick="calcInput('=')">=</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-bg" id="contact">
+  <div class="contact-inner">
+    <div class="fade-in" style="text-align:center;">
+      <div class="sec-label" style="background:rgba(16,185,129,0.15);color:#6EE7B7;justify-content:center;">Let's connect</div>
+      <h2 class="sec-title">Get In Touch</h2>
+      <p class="sec-sub">Got a project, idea, or just want to say hi? I'd love to hear from you.</p>
+    </div>
+    <div class="contact-top fade-in">
+      <a class="cc" href="mailto:poudelkusal123@gmail.com">
+        <div class="cc-icon" style="background:rgba(255,107,0,0.2);">✉️</div>
+        <h4>Email</h4><span>poudelkusal123@gmail.com</span>
+      </a>
+      <a class="cc" href="https://github.com/kushalverse007" target="_blank">
+        <div class="cc-icon" style="background:rgba(0,194,255,0.2);">💻</div>
+        <h4>GitHub</h4><span>@kushalverse007</span>
+      </a>
+      <a class="cc" href="https://www.linkedin.com/in/kushal-poudel-b35739360/?skipRedirect=true/" target="_blank">
+        <div class="cc-icon" style="background:rgba(16,185,129,0.2);">🔗</div>
+        <h4>LinkedIn</h4><span>Kushal Poudel</span>
+      </a>
+    </div>
+    <div class="contact-form fade-in">
+      <div class="form-row">
+        <div class="fg"><label>Your name</label><input type="text" placeholder="Ram Bahadur"></div>
+        <div class="fg"><label>Your email</label><input type="email" placeholder="ram@example.com"></div>
+      </div>
+      <div class="fg"><label>Subject</label><input type="text" placeholder="Let's work on..."></div>
+      <div class="fg"><label>Message</label><textarea rows="4" placeholder="Tell me about your idea or project..."></textarea></div>
+      <button class="form-submit" onclick="submitForm(this)">Send Message 🚀</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">KP<span>.</span></div>
+  <div class="f-copy">© 2026 Kushal Poudel</div>
+  <div class="f-links">
+    <a href="https://github.com/kushalverse007/Portfolio" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/kushal-poudel-b35739360/?skipRedirect=true/" target="_blank">LinkedIn</a>
+    <a href="https://www.facebook.com/kushal.poudel.599836" target="_blank">Facebook</a>
+  </div>
+</footer>
+</body>
+</html>
